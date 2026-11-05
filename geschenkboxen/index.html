@@ -310,6 +310,7 @@ legend{padding:0;margin-bottom:var(--s21);font:700 16px/1.2 var(--display);lette
 .foot-grid{display:grid;gap:var(--s55);align-items:end}
 .foot-grid > .lockup{justify-self:end}
 .claim{font:400 15px/1 var(--display);letter-spacing:.15em;text-transform:uppercase}
+.uf-link{display:inline-block;margin-top:var(--s34)}.uf-link img.uf{display:block;height:34px;width:auto}
 .smile{font:700 var(--t26)/1.1 var(--display);margin:var(--s21) 0 0;letter-spacing:.02em}
 .lockup{--h:34px;position:relative;width:var(--h);height:calc(var(--h) * 12.7);color:var(--eis)}
 .lki{position:absolute;left:0;top:0;display:flex;align-items:center;gap:calc(var(--h) * .875);height:var(--h);transform-origin:0 0;transform:rotate(-90deg) translateX(-100%);white-space:nowrap}
@@ -455,14 +456,14 @@ legend{padding:0;margin-bottom:var(--s21);font:700 16px/1.2 var(--display);lette
     <div>
       <p class="lead rv" style="margin-top:0">In jedem SANNIS-Produkt steckt dasselbe: Bio-Leinöl aus unserer eigenen Presse. Das Öl ist reich an Omega-3 und voller Genuss – cremig, nussig, nicht bitter, weil wir schonend kalt pressen. In der Küche ist es Lebensmittel, im Bad die Basis von SANNIS Kosmetik. So wie innen, so auch außen.</p>
       <div class="facts rv" style="margin-top:var(--s34)">
-        <div class="fact"><b>55&nbsp;%</b><span>Omega-3 (Alpha-Linolen&shy;säure)*</span></div>
+        <div class="fact"><b>über 55&nbsp;%</b><span>Omega-3 (ALA, Alpha-Linolen&shy;säure)*</span></div>
         <div class="fact"><b>&lt;&nbsp;29&nbsp;°C</b><span>kaltgepresst: cremig, nussig, nicht bitter</span></div>
         <div class="fact"><b>Bio</b><span>Leinsaat aus Österreich und Deutschland, AT-BIO-301</span></div>
         <div class="fact"><b>1</b><span>eigene Manufaktur, kein Zwischen&shy;handel</span></div>
       </div>
       <div class="duo rv">
         <div><p class="label">Innen:</p><p>Bio-Leinöl und Bio-Pesto für die kalte Küche – Müsli, Salat, Pasta, Erdäpfel mit Topfen.</p></div>
-        <div><p class="label">Außen:</p><p>SANNIS Kosmetik: Tagescreme, Peeling, Bartöl und Lippenbalsam – alle mit SANNIS Bio-Leinöl.</p></div>
+        <div><p class="label">Außen:</p><p>SANNIS Kosmetik: Tagescreme, Peeling, Bartöl und Lippenbalsam – alle mit SANNIS Leinöl.</p></div>
       </div>
       <p class="fine">* Anteil Alpha-Linolensäure (pflanzliches Omega-3) am Fettsäureprofil des SANNIS Bio-Leinöls. Bio-zertifiziert sind Bio-Leinöl und Pestos (AT-BIO-301).</p>
     </div>
@@ -498,7 +499,7 @@ legend{padding:0;margin-bottom:var(--s21);font:700 16px/1.2 var(--display);lette
     <p class="label rv">Unsere Herkunft:</p>
     <h2 class="h2 rv" style="color:var(--violet)">Gepresst am Arlberg.</h2>
     <div class="alt rv"><b>963</b><span>Meter Seehöhe</span></div>
-    <p class="lead rv">Unsere Manufaktur in Wald am Arlberg ist eine der höchstgelegenen Ölmühlen Europas. Hier pressen wir mit unserem Team jede Flasche frisch – im Klostertal, Vorarlberg.</p>
+    <p class="lead rv">Unsere Manufaktur in Wald am Arlberg liegt auf über 1.000 Metern. Hier pressen wir mit unserem Team jede Flasche frisch – im Klostertal, Vorarlberg.</p>
     <div class="frank rv">
       <blockquote>„Seit über zehn Jahren pressen wir in Vorarlberg Bio-Leinöl – frisch, schonend und mit viel Liebe. Aus diesem einen Öl ist unsere ganze Welt entstanden: vom Pesto aus der Haubenküche bis zur Tagescreme. Wer eine SANNIS-Box verschenkt, schenkt ein Stück Arlberg. Und ein Lächeln.“</blockquote>
       <img src="assets/img/frank-face_360.webp" alt="Frank Nessler, Gründer von SANNIS" loading="lazy"><p><strong>Frank Nessler</strong>Gründer und Geschäftsführer</p>
@@ -646,6 +647,7 @@ legend{padding:0;margin-bottom:var(--s21);font:700 16px/1.2 var(--display);lette
   <div class="wrap foot-grid">
     <div>
       <p class="smile">Ein Lächeln…<br>dein SANNIS-Team</p>
+      <a class="uf-link" href="https://sannis.at" target="_blank" rel="noopener"><img class="uf" src="assets/img/SANNIS_URL_Frame_white.png" alt="sannis.at" height="34" loading="lazy"></a>
       <div class="legal">
         <span>© 2026 SANNIS GmbH · Wald am Arlberg</span>
         <a href="https://sannis.at/shop/" target="_blank" rel="noopener">E-Shop</a>
@@ -672,20 +674,20 @@ const FORM_ENDPOINT = ""; // optional später: Formular-Dienst (z. B. Web3Forms/
 const PRICE_NET = 41.58, PRICE_GROSS = 49.90;
 
 const P = {
-  oel:   {n:"Bio-Leinöl extra nativ", s:"250 ml", d:"Cremig, nussig, nicht bitter: schonend kaltgepresst unter 29 °C, extra nativ und bewusst ungefiltert. Mit rund 55 % Alpha-Linolensäure reich an pflanzlichem Omega-3.", u:"In der lichtgeschützten Glasflasche mit Frischeverschluss. Für die kalte Küche: Müsli, Salat, Erdäpfel mit Topfen."},
+  oel:   {n:"Bio-Leinöl extra nativ", s:"250 ml", d:"Cremig, nussig, nicht bitter: schonend kaltgepresst unter 29 °C, extra nativ und bewusst ungefiltert. Reich an Omega-3: über 55 % Omega-3 (ALA).", u:"In der lichtgeschützten Glasflasche mit Frischeverschluss. Für die kalte Küche: Müsli, Salat, Erdäpfel mit Topfen."},
   kpesto:{n:"Bio-Kräuter-Pesto", s:"180 g", d:"Saisonal mit frischem Bio-Basilikum und Bio-Petersilie vom FRI-MA Biohof aus Vorarlberg, auf Basis von SANNIS Bio-Leinöl. Verfeinert mit Bio-Parmigiano Reggiano und Bio-Haselnüssen aus dem Piemont.", u:"Originalrezeptur aus der Haubenküche des Gasthof Rössle in Innerbraz."},
   tpesto:{n:"Bio-Tomaten-Pesto", s:"180 g", d:"Pesto Rosso mit sonnengetrockneten Bio-Tomaten, Bio-Parmigiano Reggiano und Bio-Haselnüssen – auf Basis von SANNIS Bio-Leinöl.", u:"Originalrezeptur aus der Haubenküche des Gasthof Rössle in Innerbraz."},
-  lippe: {n:"Lippenbalsam", s:"SANNIS Kosmetik · 5 ml", d:"Mit SANNIS Bio-Leinöl, Mandelöl, Jojobaöl, Sheabutter und Bienenwachs. Für ein zartes, gepflegtes Lippengefühl.", u:"Der tägliche Begleiter für jede Jackentasche."},
-  creme: {n:"Tagescreme", s:"SANNIS Kosmetik · 75 ml", d:"Leichte Textur mit SANNIS Bio-Leinöl, Sheabutter, Rosenhydrolat und Hyaluronsäure. Für ein frisches, gepflegtes Hautgefühl, zieht schnell ein.", u:"Im Airless-Pumpspender, auch als Grundlage für Make-up."},
-  peel:  {n:"Peeling für Gesicht und Körper", s:"SANNIS Kosmetik · 200 ml", d:"Ölpeeling mit basischem Natursalz aus österreichischen Salinen, SANNIS Bio-Leinöl und ätherischen Ölen wie Pfefferminze. Reinigt sanft und pflegt in einem Schritt – mit angenehm frischem Duft und einem kühlend-erfrischenden Hautgefühl.", u:"Für Gesicht und Körper. Tipp vor der Rasur: Das Peeling sanft einmassieren, dann gleitet die Klinge besser. Danach fühlt sich die Haut glatt, weich und erfrischt an."},
-  bart:  {n:"Bartöl", s:"SANNIS Kosmetik · 30 ml", d:"SANNIS Bio-Leinöl und fünf weitere Bio-Pflanzenöle. Macht das Barthaar weich und pflegt die Haut darunter.", u:"Dezenter Duft aus Sandelholz, Benzoe und Rosmarin."}
+  lippe: {n:"Lippenbalsam", s:"SANNIS Kosmetik · 5 ml", d:"Mit SANNIS Leinöl, Mandelöl, Jojobaöl, Sheabutter und Bienenwachs. Für ein zartes, gepflegtes Lippengefühl.", u:"Der tägliche Begleiter für jede Jackentasche."},
+  creme: {n:"Tagescreme", s:"SANNIS Kosmetik · 75 ml", d:"Leichte Textur mit SANNIS Leinöl, Sheabutter, Rosenhydrolat und Hyaluronsäure. Für ein frisches, gepflegtes Hautgefühl, zieht schnell ein.", u:"Im Airless-Pumpspender, auch als Grundlage für Make-up."},
+  peel:  {n:"Peeling für Gesicht und Körper", s:"SANNIS Kosmetik · 200 ml", d:"Ölpeeling mit basischem Natursalz aus österreichischen Salinen, SANNIS Leinöl und ätherischen Ölen wie Pfefferminze. Reinigt sanft und pflegt in einem Schritt – mit angenehm frischem Duft und einem kühlend-erfrischenden Hautgefühl.", u:"Für Gesicht und Körper. Tipp vor der Rasur: Das Peeling sanft einmassieren, dann gleitet die Klinge besser. Danach fühlt sich die Haut glatt, weich und erfrischt an."},
+  bart:  {n:"Bartöl", s:"SANNIS Kosmetik · 30 ml", d:"SANNIS Leinöl und fünf weitere Pflanzenöle. Macht das Barthaar weich und pflegt die Haut darunter.", u:"Dezenter Duft aus Sandelholz, Benzoe und Rosmarin."}
 };
 const BOXES = [
   {id:"feinkost",  short:"Bio-Leinöl · 2 × Bio-Pesto · Lippenbalsam", name:"Feinkost",       art:"3690000050", who:"Unisex · für Genießer", line:"Für alle, die gern gut essen: Bio-Leinöl reich an Omega-3 – mild, cremig, nussig – nicht bitter. Dazu zwei Bio-Pestos aus der Haubenküche des Gasthof Rössle in Innerbraz im Klostertal und ein Lippenbalsam, der die Lippen zart pflegt.", items:["oel","kpesto","tpesto","lippe"]},
-  {id:"oelcreme",  short:"Bio-Leinöl · Tagescreme · Lippenbalsam", name:"Öl & Creme",     art:"3690000040", who:"Unisex",                 line:"Genuss für innen, Pflege für außen: Bio-Leinöl reich an Omega-3 – mild, cremig, nussig – nicht bitter. Dazu die Tagescreme mit SANNIS Bio-Leinöl, fein duftend für einen gepflegten Start in den Tag, und ein Lippenbalsam für zarte Lippen.",          items:["oel","creme","lippe"]},
-  {id:"oelpeeling",short:"Bio-Leinöl · Peeling · Lippenbalsam", name:"Öl & Peeling",   art:"3690000030", who:"Unisex",                 line:"Genuss und Auszeit in einer Box: Bio-Leinöl reich an Omega-3 – mild, cremig, nussig – nicht bitter. Dazu das Ölpeeling mit SANNIS Bio-Leinöl und Pfefferminze: reinigt sanft, duftet frisch und hinterlässt ein glattes, kühlend-erfrischtes Hautgefühl. Und ein Lippenbalsam für gepflegte Lippen.",              items:["oel","peel","lippe"]},
-  {id:"man",       short:"Bio-Leinöl · Bartöl · Lippenbalsam", name:"Man",            art:"3690000020", who:"Für ihn",                line:"Für Männer mit Geschmack: Bio-Leinöl reich an Omega-3 – mild, cremig, nussig – nicht bitter. Dazu Bartöl mit SANNIS Bio-Leinöl, angenehm duftend und pflegend, und ein Lippenbalsam für gepflegte Lippen.",                                   items:["oel","bart","lippe"]},
-  {id:"kosmetik",  short:"Tagescreme · Peeling · Lippenbalsam", name:"Kosmetik",       art:"3690000010", who:"Unisex",                 line:"Das SANNIS Kosmetik-Ritual, alles mit SANNIS Bio-Leinöl: ein Ölpeeling mit frischer Pfefferminze für ein glattes, erfrischtes Hautgefühl, die Tagescreme für einen gepflegten Start in den Tag und ein Lippenbalsam, der die Lippen zart pflegt.",                     items:["peel","creme","lippe"]}
+  {id:"oelcreme",  short:"Bio-Leinöl · Tagescreme · Lippenbalsam", name:"Öl & Creme",     art:"3690000040", who:"Unisex",                 line:"Genuss für innen, Pflege für außen: Bio-Leinöl reich an Omega-3 – mild, cremig, nussig – nicht bitter. Dazu die Tagescreme mit SANNIS Leinöl, fein duftend für einen gepflegten Start in den Tag, und ein Lippenbalsam für zarte Lippen.",          items:["oel","creme","lippe"]},
+  {id:"oelpeeling",short:"Bio-Leinöl · Peeling · Lippenbalsam", name:"Öl & Peeling",   art:"3690000030", who:"Unisex",                 line:"Genuss und Auszeit in einer Box: Bio-Leinöl reich an Omega-3 – mild, cremig, nussig – nicht bitter. Dazu das Ölpeeling mit SANNIS Leinöl und Pfefferminze: reinigt sanft, duftet frisch und hinterlässt ein glattes, kühlend-erfrischtes Hautgefühl. Und ein Lippenbalsam für gepflegte Lippen.",              items:["oel","peel","lippe"]},
+  {id:"man",       short:"Bio-Leinöl · Bartöl · Lippenbalsam", name:"Man",            art:"3690000020", who:"Für ihn",                line:"Für Männer mit Geschmack: Bio-Leinöl reich an Omega-3 – mild, cremig, nussig – nicht bitter. Dazu Bartöl mit SANNIS Leinöl, angenehm duftend und pflegend, und ein Lippenbalsam für gepflegte Lippen.",                                   items:["oel","bart","lippe"]},
+  {id:"kosmetik",  short:"Tagescreme · Peeling · Lippenbalsam", name:"Kosmetik",       art:"3690000010", who:"Unisex",                 line:"Das SANNIS Kosmetik-Ritual, alles mit SANNIS Leinöl: ein Ölpeeling mit frischer Pfefferminze für ein glattes, erfrischtes Hautgefühl, die Tagescreme für einen gepflegten Start in den Tag und ein Lippenbalsam, der die Lippen zart pflegt.",                     items:["peel","creme","lippe"]}
 ];
 
 /* ===================== Helfer */
