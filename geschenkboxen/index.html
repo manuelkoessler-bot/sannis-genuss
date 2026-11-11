@@ -235,8 +235,9 @@ section{position:relative}
 /* ---------- Geschenkbox */
 .giftbox{display:grid;gap:var(--s55);align-items:center}
 .giftbox figure{margin:0;position:relative}
-.boxpair{display:grid;grid-template-columns:1fr 1fr;gap:var(--s8)}
-.boxpair img{aspect-ratio:1;object-fit:cover}
+.boxpair{display:grid;grid-template-columns:1fr;gap:var(--s21)}
+@media (min-width:640px){.boxpair{grid-template-columns:1fr 1fr;gap:var(--s8)}}
+.boxpair img{aspect-ratio:1;object-fit:cover;mix-blend-mode:multiply}
 .boxpair figcaption{margin-top:var(--s8);font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .giftbox figure img{width:100%;height:auto;display:block}
 .star{position:absolute;top:var(--s13);left:var(--s13);background:var(--violet);color:var(--eis);font:700 11px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;padding:var(--s8) var(--s13);border-radius:999px}
@@ -543,19 +544,18 @@ legend{padding:0;margin-bottom:var(--s21);font:700 16px/1.2 var(--display);lette
 <section class="sec" id="verpackung" style="background:#fff">
   <div class="wrap giftbox">
     <div class="boxpair rv">
-      <figure><img src="assets/img/geschenkbox_aussen_1x1.webp" alt="SANNIS Geschenkbox: weiß mit GENUSS SCHENKEN und senkrechtem Logo" loading="lazy" width="1200" height="1200"></figure>
-      <figure><img src="assets/img/geschenkbox_innen_detail_1x1.webp" alt="Innenseite der SANNIS Geschenkbox: LOVE LIFE AND SHINE auf Violett, S-Pattern" loading="lazy" width="1200" height="1200"></figure>
+      <figure><img src="assets/img/geschenkbox_masche_1x1.webp" alt="SANNIS Geschenkbox geschlossen: weiß mit violetter Masche und „Für dich …“" loading="lazy" width="1024" height="1024"></figure>
+      <figure><img src="assets/img/geschenkbox_offen_befuellt_1x1.webp" alt="SANNIS Geschenkbox geöffnet: innen Violett mit „Love life and shine“, beispielhaft befüllt mit Bio-Leinöl und Pflege" loading="lazy" width="1024" height="1024"></figure>
     </div>
     <div>
       <p class="label rv">Die Verpackung:</p>
       <h2 class="h2 rv" style="color:var(--violet)">Außen still.<br>Innen <span class="outline">Shine.</span></h2>
-      <p class="lead muted rv">Eine hochwertige Box, auf die man sich freut, wenn man sie aufmacht: außen Weiß, innen SANNIS-Violett mit „Love Life and Shine“.</p>
+      <p class="lead muted rv">Eine hochwertige Box, auf die man sich freut, wenn man sie aufmacht: außen Weiß mit violetter Masche, innen SANNIS-Violett mit „Love life and shine.“</p>
       <ul class="ticks rv">
         <li>Fertig befüllt und geschenkbereit</li>
         <li>Hochwertig verarbeitet, schön zum Auspacken</li>
         <li>„Made with ♡ in Austria“</li>
       </ul>
-      <p class="note rv">Visualisierung der Geschenkbox. Die Box ist derzeit in Produktion, die finale Gestaltung kann leicht abweichen.</p>
     </div>
   </div>
 </section>
