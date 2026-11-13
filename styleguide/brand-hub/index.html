@@ -718,7 +718,7 @@ exports.init = init;
                 rememberPassphraseKey: "staticrypt_passphrase",
                 // Erfolg: breites Lächeln + Öltropfen, dann öffnet der Style Guide
                 replaceHtmlCallback: function (html) {
-                    smile(1.25); drops();
+                    smile(1.25);
                     setTimeout(function () { document.open(); document.write(html); document.close(); }, 1000);
                 },
                 clearLocalStorageCallback: null,
